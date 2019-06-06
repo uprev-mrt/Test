@@ -5,6 +5,11 @@ find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 enable_testing()
 
+add_definitions(
+    -DPOLY_PACKET_DEBUG_LVL=0
+    -g
+    )
+
 include_directories("../Modules")
 include_directories("../Utilities/Blob")
 include_directories("../Utilities/Fifo")
