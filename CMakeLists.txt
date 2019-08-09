@@ -24,6 +24,6 @@ file(GLOB_RECURSE TEST_FILES "${CMAKE_CURRENT_SOURCE_DIR}/../*_UT.cpp")
 
 # Link runTests with what we want to test and the GTest and pthread library
 add_definitions(-DUNIT_TESTING_ENABLED)
-add_definitions(-DMRT_PLATFORM_LINUX)
+add_definitions(-DMRT_PLATFORM_NONE)
 add_executable(runTests Tester.cpp ${TEST_FILES})
 target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)
